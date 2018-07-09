@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<style type="text/css">
+	*{
+		box-sizing: border-box;
+	}
+
+	body{
+		font-family: Arial;
+		padding: 10px;
+		background: #F1F1F1;
+		background-image: url(1.jpg);
+		background-repeat: no-repeat;
+	}
+	.header{
+		background-color: #f5cd79;
+		text-align:center;
+		padding: 10px;
+	}
+	.header h1{
+		font size: 70px;
+		text-shadow: red;
+		text-shadow: 3px 2px red;
+
+	}
+
+	.topnav{
+		overflow: hidden;
+		background-color: #333;
+	}
+
+
+	/* Navbar links */
+	.topnav a {
+	    float: left;
+	    display: block;
+	    color: #f2f2f2;
+	    text-align: center;
+	    padding: 14px 16px;
+	    text-decoration: none;
+	}
+
+	/* Links - change color on hover */
+	.topnav a:hover {
+	    background-color: #ddd;
+	    color: black;
+	}
+	
+	.leftcolumn {
+	    float: left;
+	    width: 75%;
+	}
+
+	.rightcolumn{
+		float: left;
+		width: 25%;
+		background-color: #F1F1F1;
+		padding-left: 20px;
+
+	}
+
+
+	.himg{
+		background-color: #aab;
+		width: 100%;
+		padding: 20px;
+	}
+
+	.ahtl{
+		background-size: auto;
+		width: 100%;
+	}
+
+	.rightcolumn ul {
+		background-color: orange;
+		list-style-type: none;
+	}
+
+	/*card effect*/
+	.card{
+		background-color: white;
+		padding: 20px;
+		margin-top: 20px;
+	}
+
+	/*clearing floats after columns*/
+	.row:after{
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	.Comment{
+		background-color: #f5cd79;
+		padding: 30px;
+		width: 100%;
+	}
+
+	.footer {
+	    background-color: grey;
+	    text-align: center;
+	    padding: 20px;
+	    margin-top: 20px;
+
+	}
+	.footer h5{
+		font-size: 15px;
+	}
+
+	/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+	@media screen and (max-width: 800px) {
+	    .leftcolumn, .rightcolumn {   
+	        width: 100%;
+	        padding: 0;
+	    }
+	}
+
+	/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+	@media screen and (max-width: 400px) {
+	    .topnav a {
+	        float: none;
+	        width: 100%;
+	    }
+	}
+
+	ul {
+	    list-style-type: none;
+	    margin: 0;
+	    padding: 0;
+	    overflow: hidden;
+	    //background-color: #333;
+	}
+
+	li {
+	    float: left;
+	}
+
+	li a, .dropbtn {
+	    display: inline-block;
+	    color: white;
+	    text-align: center;
+	    padding: 14px 16px;
+	    text-decoration: none;
+	}
+
+	li a:hover, .dropdown:hover .dropbtn {
+	    background-color: red;
+	}
+
+	li.dropdown {
+	    display: inline-block;
+	}
+
+	.dropdown-content {
+	    display: none;
+	    position: absolute;
+	    background-color: #f9f9f9;
+	    min-width: 160px;
+	    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	    z-index: 1;
+	}
+
+	.dropdown-content a {
+	    color: black;
+	    padding: 12px 16px;
+	    text-decoration: none;
+	    display: block;
+	    text-align: left;
+	}
+
+	.dropdown-content a:hover {background-color: #f1f1f1}
+
+	.dropdown:hover .dropdown-content {
+	    display: block;
+	}	
+
+	table, th, td {
+    	border: 1px solid black;
+    	border-collapse: collapse;
+	}
+	th{
+		text-decoration-color: blue;
+	}
+	.book{
+		background-color: #f5cd79;
+		transform-origin: center;
+	}
+
+	.prev,.next{
+		cursor: pointer;
+		position: absolute;
+		top:40%;
+		width: auto;
+		padding: 16px;
+		margin-top: -50px;
+		color: white;
+		font-weight: bold;
+		font-size: 20px;
+		border-radius: 0 3px 3px 0;
+		user-select: none;
+		-webkit-user-select:none;
+	}
+
+	input[type=button], input[type=submit], input[type=reset] {
+		    background-color: #4CAF50;
+		    border: none;
+		    color: white;
+		    padding: 16px 32px;
+		    text-decoration: none;
+		    margin: 4px 2px;
+		    cursor: pointer;
+		}
+		.f1{
+			float: left;
+			width: 25%;
+			background-color: grey;
+			padding-left: 20px;
+			height: 300px;
+		}
+
+		.f2{
+			float: left;
+			width: 25%;
+			background-color: grey;
+			padding-left: 20px;
+			height: 300px;
+		}
+		.f3{
+			float: left;
+			width: 25%;
+			background-color: grey;
+			padding-left: 20px;
+			height: 300px;
+		}
+		.f4{
+			float: left;
+			width: 25%;
+			background-color: grey;
+			padding-left: 20px;
+			height: 300px;
+		}
+
+
+
+		.mySlides{
+			display: none;
+		}
+
+		
+
+	</style>
+</head>
+<body>
+<div class="header">
+	<h1>HOTEL WEB</h1>
+</div>
+
+
+<div class="topnav">
+	<ul>
+  <li><a href="index.html">Group Info</a></li>
+
+  <li><a href="Gallery.html">Gallery</a></li>
+  <li><a href="login.html">Login</a></li>
+  <li><a href="accomodation.html">Accomodation</a></li>
+  <li><a href="supplementary.html">Supplementary Services</a></li>
+  <li><a href="contact.html">Contact Us</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Our Services</a>
+    <div class="dropdown-content">
+      
+      <a href="accomodation.html"><b>Room Services</b><ul style="list-style-type: none;" ><li>Single Bed</li><br><li>Double Bed</li><br><li>Triple Bed</li><br></ul></a>
+      <a href="accomodation.html"><b>Appartment Services</b> <ul style="list-style-type: none;"><li>One Bedroom</li><br><li>Two Bedroom</li><br><li>Three Bedroom</li></ul></a>
+      <a href="#"><b>Restaurant</b> <ul style="list-style-type: none;"><li>Coffee Shop</li><br><li>Lounge</li><br><li>Bar</li><br><li>Outside Catering</li></ul></a>
+      <a href="supplementary.html"><b>Supplementary Services</b><ul style="list-style-type: none;"><li>Pick and Drop</li><br><li>Laundry</li><br><li>Entertainment</li><br><li>Credit & Debit Card Facilities</li></ul></a>
+	  <a href="accomodation.html"><b>Conferencing and Banqueting</b></a>
+	  <a href="accomodation.html"><b>Accomodation</b></a>
+
+      
+    </div>
+  </li>
+</ul>
+</div>
+
+<div class="row">
+	<div class="leftcolumn">
+		<div class="card">
+			<br><br>
+			<h5>Hotel Web founded, May 5,2018</h5>
+			<marquee behavior="scroll" direction="left">Welcome to Hotel Web, We try to offer you with the best services as a result we value your feedback. </marquee><hr>
+			<br>
+			<p> Our group project: our hotel is a 5 star hotel with state of the art services incomparable to none.With a awide variety to choose from one will be spoilt for choices to choose from.A guarranteed life time experience!! </p>
+			<p> We have several services such as accomodations, swimming and recreations activities, well furnished rooms and a dining area for the meals. </p>
+			
+		</div>
+		<div class="card">
+			<h2>group</h2>
+			<h5>mine and our group</h5>
+
+			<p>
+				Hotel Web is a catering and hospitality oriented organization.
+			</p>
+		</div>
+		<video width="100%" height="620" controls>
+  		<source src="V1.mp4" type="video/mp4">
+  		<source src="movie.ogg" type="video/ogg">
+	</video>
+
+	Some images of the hotel <br>
+				
+				<a target="_blank" href="1.jpg">
+					<img src="1.jpg" alt="layout" width="280px" height="auto">
+				</a>
+				<a target="_blank" href="2.jpg">
+					<img src="2.jpg" alt="Lounge" width="280px" height="auto">
+				</a>
+				<a target="_blank" href="3.jpg">
+					<img src="3.jpg" alt="Dinning" width="280px" height="auto">
+				</a>
+
+				<form action="comment.php" class="Comment">
+			
+					<h3>Leave your Comment here</h3>
+					<p><input type="text" size="130px" name="Comment" id="comment"> <br>
+						<input type="submit" value="Submit your Comment here" name="comment"></p>
+						<marquee behavior="scroll" direction="left">Welcome to Hotel Web, We try to offer you with the best services as a result we value your feedback. </marquee>
+
+				
+				</form>
+				
+
+
+
+
+	</div>
+	
+	<div class="rightcolumn">
+		<div class="card">
+			<h2>About the Hotel</h2>
+
+			<div class="ahtl" style="height: 100px;"> Some images of the hotel <br>
+				<a target="_blank" href="1.jpg">
+					<img   src="1.jpg" alt="1" width="150px" height="auto">
+				</a>
+				
+
+			</div>
+			<p><h2><b><u>The Services We Offer</u></b></h2>
+				<ul><li><b>Room Services</b><ul style="list-style-type: none;"><li>Single Bed</li><br>
+					<li>Double Bed</li><br>
+					<li>Triple Bed</li><br></ul></li></b><br>
+					<li><b>Appartments</b>
+						<ul style="list-style-type: none;"><li>One Bedroom</li><br><li>Two Bedroom</li><br>
+							<li>Three Bedroom</li><br></ul></li>
+					<li><b>Restaurant</b><ul style="list-style-type: none;"><li>Coffee Shop</li><br>
+						<li>Lounge</li><br>
+						<li>Bar</li><br>
+						<li>Outside <br>Catering</li><br></ul></li><br>
+					<li><b>Supplementary Services</b><ul><li>Pick & Drop</li><br>
+						<li>Laundry</li><br>
+						<li>Entertainment</li><br>
+						<li>Credit and Debit Card Facilities</li><br></ol></li>
+					<li><b>Conferencing and Banqueting</b></li>
+					<li><b>Accomodation</b></li>
+					<li><b>We also have services at a cheaper rate</b>
+						<table>
+
+							<thead>
+								<tr>
+									<th>Week(s)</th>
+									<th>% Off</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>One Week</td>
+									<td>10%</td>
+								</tr>
+								<tr><td>Two Weeks</td><td>15%</td></tr>
+								<tr><td>Three Weeks</td><td>25%</td></tr>
+								<tr><td>Four Weeks and above</td><td>35%</td></tr>
+							</tbody>
+						</table>
+						</li>
+				</ul>
+			</p>
+		</div><br>
+		<div class="card">
+			<h3>Book a Room</h3>
+			
+		
+			<div class="time">
+			<form class="book" action="dbbk.php" method="post">
+				<b>First Name:</b><br>
+			<input type="text" name="fname" placeholder="Input your first Name" required ><br>
+			<b>Last name:</b><br>
+			<input type="text" name="lname" placeholder="Input your Last Name" required ><br>
+			<b>ID Number/Passport Number:</b><br>
+			<input type="Number" name="idPass" placeholder="Input your IDnumber or Passport Number" required ><br>
+			<b>Please select your Gender</b>
+			<br><input type="radio" name="Gender" value="male checked" required ><b>Male</b><br>
+			<input type="radio" name="Gender" value="Female"> <b>Female</b><br>
+
+
+				<b>Check-in</b>
+				<input type="date" name="Check_in" required ><br>
+				<b>Check-out</b>
+				<input type="date" name="Check_out" required ><br>
+				Please select the number of adults, children(if any) and the number of rooms you are booking entry for.<br>
+				<select name="no_adults"  required >
+					<option>1 adult</option>
+					<option>2 adults</option>
+					<option>3 adults</option>
+					<option>4 adults</option>
+					<option>5 adults</option>
+					<option>6 adults</option>
+					<option>7 adults</option>
+					<option>8 adults</option>
+					<option>9 adults</option>
+					<option>10 adults</option>  
+					<option>11adults</option>
+					<option>12adults</option>
+				</select>
+
+				<select name="no_children" required >
+					<option>No Children</option>
+					<option>1 Child</option>
+					<option>2 Children</option>
+					<option>3 Children</option>
+					<option>4 Children</option>
+					<option>5 Children</option>
+					<option>6 Children</option>
+					<option>7 Children</option>
+					<option>8 Children</option>
+					<option>9 Children</option>
+					<option>10 Children</option>
+
+				</select>
+
+				<select name="no_rooms" required >
+					<option>1 room</option>
+					<option>2 rooms</option>
+					<option>3 rooms</option>
+					<option>4 rooms</option>
+					<option>5 rooms</option>
+					<option>6 rooms</option>
+					<option>7 rooms</option>
+					<option>8 rooms</option>
+					<option>9 rooms</option>
+				</select><br>
+				
+				<input type="radio" name="reason" value="I am travelling for work">I/we are travelling for work<br>
+				
+				<input type="radio" name="reason" value="I am travelling for leisure">I/we are travelling for leisure<br>
+				<input type="Submit" value="Submit">
+				<input type="Reset" >
+			</form>
+			</div>
+
+			
+			<form action="/index.html" method="post">
+
+	</form>
+
+	<input type="button" onclick="alert('Please fill in the forms so as to ensure your online booking is sucessfull.Make sure you submit the information fed so as to make them saved')" value="For Help Click Me!">
+	<button type="button"
+		onclick="document.getElementById('ntime').innerHTML = Date()">
+		Click me to display Date and Time.</button>
+
+		<!-- Initialize Google Maps -->
+	<script>
+	function myMap() {
+	  var myCenter = new google.maps.LatLng(51.508742,-0.120850);
+	  var mapCanvas = document.getElementById("map");
+	  var mapOptions = {center: myCenter, zoom: 12};
+	  var map = new google.maps.Map(mapCanvas, mapOptions);
+	  var marker = new google.maps.Marker({position:myCenter});
+	  marker.setMap(map);
+	}
+	</script>
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+
+		<p id="ntime"></p>
+
+
+		</div>
+			
+		</div>
+
+	</div>
+
+	<div class="footer">
+		<h2></h2>
+
+	<div class="f1">
+		<i><U><b><h5>Follow Us</h5></b></U></i>
+		<p>Google</p>
+		<p>facebook</p>
+		<p>twitter</p>
+		<p>instagram</p>
+		<p>Linkedin</p>
+	</div>
+
+	<div class="f2">
+		<i><u><b><h5>Mode of Payment</h5></b></u></i>
+		<p>cash</p>
+		<p>mpesa</p>
+		<p>visa</p>
+
+	</div>
+
+	<div class="f3">
+		<i><u><b><h5>Support</h5></b></u></i>
+		<p>Contact Support</p>
+		<a href="0714250272" class="fa fa-phone">+254714250272</a> &nbsp;<br/>
+		<a href="https://plus.google.com/discover" class="fa fa-google">Google+</a> &nbsp;<br/>
+		<a href="https://twitter.com/" class="fa fa-twitter">Twitter</a> &nbsp;<br/>
+		<a href="https://scan.snapchat.com/" class="fa fa-snapchat-ghost">SnapChat</a> &nbsp;<br/>
+		<a href="https://www.facebook.com/" class="fa fa-facebook">Facebook</a> &nbsp;<br/>
+		<a href="https://www.instagram.com/alanitolavato/" class="fa fa-instagram">Instagram</a> &nbsp;<br/>
+		
+
+		<p><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe"></iframe></p>
+
+	</div>
+	<div class="f4">
+		
+	</div>
+
+			
+		
+	</div>
+	
+	<script type="text/javascript">
+
+		var myIndex = 0;
+		carousel();
+ 
+		function carousel(){
+			var i;
+			var x = document.getElementByClassName("mySlides");
+			for(i = 0; i< x.length; i++){
+				x[i].style.display = "none";
+			}
+
+			myIndex++;
+			if (myIndex > x.length) {myIndex = 1}
+			x[myIndex-1].style.display = "block";
+			setTimeout(carousel, 5000);
+		}
+	</script>
+
+
+</body>
+</html>
+
